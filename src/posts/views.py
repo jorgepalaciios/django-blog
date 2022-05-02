@@ -65,6 +65,7 @@ class PostUpdateView(UpdateView):
 class PostDeleteView(DeleteView):
     model = Post
 
+
     success_url = '/'
 
 def like(request, slug):

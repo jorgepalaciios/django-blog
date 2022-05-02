@@ -20,6 +20,8 @@ urlpatterns = [
     path('<slug>/update/', PostUpdateView.as_view(), name='update'),
     path('<slug>/delete/', PostDeleteView.as_view(), name='delete'),
     path('like/<slug>/', like, name='like'),
+
+    path("__reload__/", include("django_browser_reload.urls")),
 ]
 
 

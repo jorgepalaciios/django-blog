@@ -33,8 +33,18 @@ INSTALLED_APPS = [
     'allauth.socialaccount',
     'crispy_forms',
     
+    'blog',
     'posts',
+    'tailwind',
+    'theme',
+    'django_browser_reload'
 
+]
+
+TAILWIND_APP_NAME = 'theme'
+
+INTERNAL_IPS = [
+    "127.0.0.1",
 ]
 
 CRISPY_TEMPLATE_PACK = 'bootstrap'
@@ -47,6 +57,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    "django_browser_reload.middleware.BrowserReloadMiddleware",
 ]
 
 ROOT_URLCONF = 'blog.urls'
@@ -138,3 +149,5 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 SITE_ID = 1
 
 AUTH_USER_MODEL = 'posts.User'
+
+NPM_BIN_PATH = r"C:\Program Files\nodejs\npm.cmd"
